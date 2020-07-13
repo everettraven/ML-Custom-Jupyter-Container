@@ -11,7 +11,7 @@ Steps for installing Docker here: https://docs.docker.com/get-docker/
 ## Clone the Git Repo
 
 ```
-$ git clone https://github.com/everettraven/ML-Custom-Jupyter-Container.git
+git clone https://github.com/everettraven/ML-Custom-Jupyter-Container.git
 ```
 
 ## Build the Docker Image
