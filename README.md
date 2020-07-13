@@ -10,9 +10,9 @@ Steps for installing Docker here: https://docs.docker.com/get-docker/
 
 ## Clone the Git Repo
 
-'''
+```
 $ git clone https://github.com/everettraven/ML-Custom-Jupyter-Container.git
-'''
+```
 
 ## Build the Docker Image
 
@@ -28,14 +28,14 @@ I recommend using the -t option when building so you can apply whatever name you
 
 ### Without build args
 
-'''
+```
 docker build -t ML-Custom-Jupyter-Container <PATH/TO/SOURCE>
-'''
+```
 
 ### With build args
-'''
+```
 docker build --build-arg jupyter_token="newtokenhere" --build-arg port="5000"  -t ML-Custom-Jupyter-Container <PATH/TO/SOURCE>
-'''
+```
 
 **NOTE:** *Make sure to replace '<PATH/TO/SOURCE>' with the path to your Dockerfile*
 
@@ -47,14 +47,14 @@ If you build the Docker image to use a different port, make sure to change the p
 
 ### Without Setting Environment Variables
 
-'''
+```
 docker run --gpus all -it -p 8888:8888 ML-Custom-Jupyter-Container
-'''
+```
 
 ### With Setting Environment Variables
 
 This example changes the port to port 8000 instead of the default port 8888
 
-'''
+```
 docker run -e port=8000 --gpus all -it -p 8000:8000 ML-Custom-Jupyter-Container
-'''
+```
